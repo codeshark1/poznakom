@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@import '_variables';
+@import '_base+common';
+@import '_plugins';
+@import '_other';
+
+body {	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #414042;
+	line-height: 1.5;
+	@media (min-width: $screen-md-min) {font-size: 18px;}
+}
+
+a {
+	color: $main;
+}
+
+a, svg, path, button {transition: all .15s;}
+.container {
+	padding: 0 16px;
+	margin: 0 auto;
+	@media (min-width: $screen-sm-min) {width: 720px;}
+	@media (min-width: $screen-md-min) {width: 960px;}
+	
+}
+$sect-mg: 2rem;
+$sect-mg-neg: 39px;
+
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.header-site {
+	background: #00ACFF url('../img/bg.svg') 50% 50% no-repeat;
+}
+.h-header {
+	color: #fff;	
+	font-size: 28px; //?
+	font-family: 'iskracyr-medium', sans-serif;
+	@media (min-width: $screen-sm-min) {
+		font-size: 36px; 
+		font-family: 'iskracyr-bold', sans-serif;
+	}
+	@media (min-width: $screen-md-min) {font-size: 44px;}
+}
+.row-header {
+	@media (max-width: $screen-xs-max) {
+		.col-right {display: none;}
+	}
+	.col-left {
+		padding: 64px 0 60px;
+		.buttons {
+			.btn:first-child {margin-right: 15px;}
+			@media (min-width: $screen-sm-min) {
+				.btn:first-child {margin-right: 30px;}
+			}
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		padding-top: 60px;
+		.col-right {
+			width: 280px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			flex-shrink: 0;
+			img {display: block;}
+		}
+	}
+	@media (min-width: $screen-md-min) {
+		padding-top: 100px;
+		display: flex;
+		.col-right {width: 380px;}
+	}	
+}
+
+
+/* CONTENT */
+.content-landing {text-align: center;}
+.row-carousel {
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		justify-content: space-between;
+		.slide {width: 29%;}
+	}
+}
+.h-slide, .h-section {font-family: 'iskracyr-medium', sans-serif;}
+.h-section {margin: 0 0 0 0;}
+.h-slide {	
+	font-size: 16px;
+	margin: 0;
+	@media (min-width: $screen-sm-min) {font-size: 18px;}
+
+	&.h-dash {position: relative;
+		&:after {
+			content:"";
+			width: 44px;height: 4px;
+			display: block;
+			margin: 16px auto;
+			background: $main;
+		}
+	}
+}
+.img-slide {
+	svg {max-width: 100%}
+}
+.h-slide + .img-slide {
+	margin-top: 30px;
+	@media (min-width: $screen-sm-min) {margin-top: 40px;}
+}
+
+.description {
+	margin-top: 40px;
+}
+
+.section {
+	padding: 50px 0;
+	@media (min-width: $screen-sm-min) {padding: 75px 0}
+	&.bg {background: #F8F8F8;}
+}
+
+
+#circular {
+	background: url('../img/explained-bg.svg') 50% 50% no-repeat;
+	height: 275px;	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-size: 105px 75px;
+
+	@media (max-width: $screen-xs-max) {
+		width: 320px;
+		margin: 0 auto;
+	}
+	.node {
+		//transition: background .15s;
+		position: relative;
+	}
+	.node-1, .node-3 {
+		width: 124px;
+		height: 198px;		
+	}
+	.node-1 {
+		background:url('../img/circle-left.svg') center center no-repeat;
+		left: 25px;		
+		&:hover {background:url('../img/circle-left-active.svg') center center no-repeat;}
+	}
+	.node-2 {
+		background:url('../img/circle-center.svg') center center no-repeat;
+		height: 275px;
+		width: 83px;
+		&:hover {background:url('../img/circle-center-active.svg') center center no-repeat;}
+	}	
+	.node-3 {
+		background:url('../img/circle-right.svg') center center no-repeat;
+		right: 25px;
+		&:hover {background:url('../img/circle-right-active.svg') center center no-repeat;}
+	}	
+
+	@media (min-width: $screen-sm-min) {
+		height: 742px;	
+		background-size: 245px 170px;		
+		.node-1 {left: 60px; width: 302px; height: 508px;}
+		.node-2 {left: 5px; width: 208px; height: 670px;}
+		.node-3 {right: 50px; width: 317px; height: 510px;}		
+	}
+	@media (min-width: $screen-md-min) {
+		.node-1 {left: 138px}
+		.node-2 {left: 5px}
+		.node-3 {right: 125px}
+	}
+}
+
+
+.howitworks {
+	.device {
+		box-shadow: 0 -2px 4px #CCCDD4;
+		border-radius: 30px;		
+		width: 280px;
+		overflow: hidden;
+		/*position: relative;
+		padding: 40px 25px 0 20px; */
+		.button {
+			border-radius: 100%;
+			border: 2px solid #F3F5F8;
+			width: 38px;
+			height: 38px;
+			margin: 0 auto;
+			position: absolute; left: 0;right: 0;bottom: 24px; margin: auto;
+		}
+
+	}
+}
