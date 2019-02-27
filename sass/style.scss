@@ -73,6 +73,7 @@ $sect-mg-neg: 39px;
 }
 .buttons {
 	display: flex;
+	justify-content: center;
 	.btn:first-child {margin-right: 15px;}
 	@media (min-width: $screen-sm-min) {
 		.btn:first-child {margin-right: 30px;}

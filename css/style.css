@@ -676,7 +676,8 @@ a, svg, path, button {
       width: 380px; } }
 
 .buttons {
-  display: flex; }
+  display: flex;
+  justify-content: center; }
   .buttons .btn:first-child {
     margin-right: 15px; }
   @media (min-width: 700px) {
