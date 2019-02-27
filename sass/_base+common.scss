@@ -233,25 +233,19 @@ label.checkbox {
   -webkit-appearance: none;
   overflow: hidden;
   vertical-align: middle;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: transparent;
   transition: all .3s;  
-  &:hover {
-    cursor: pointer;
-  }
+  &:hover {cursor: pointer;}
 
   background: #fff;
   border-radius: 4px;
-  padding: 10px 10px;
+  padding: 6px 9px;
   font-size: 14px;
   svg {width: 22px !important; margin-right: 10px; vertical-align: middle;}
 
-  @media (min-width: $screen-sm-min) {
-    padding: 15px 22px;
-  }
-  @media (min-width: $screen-md-min) {
-    font-size: 22px;
-  }
+  @media (min-width: $screen-sm-min) {padding: 6px 12px;}
+
 }
 
 
@@ -262,7 +256,20 @@ label.checkbox {
   &:active {background: #307420; color: #fff !important}
 }
 
+.btn-header {
+  @media (min-width: $screen-sm-min) {
+    padding: 15px 22px;
+  }  
+  @media (min-width: $screen-md-min) {
+    font-size: 22px;
+  }  
+}
 
+.btn-dark {
+  border: 2px solid #414042;
+  color: #414042;
+
+}
 
 /* ==========================================================================
    CONTENT
