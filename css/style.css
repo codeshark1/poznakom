@@ -1132,7 +1132,6 @@ a, svg, path, button {
   border-radius: 4px;
   transition: all .15s;
   border: 1px solid transparent;
-  border-left: 4px solid #009DFF;
   padding: 20px;
   text-align: left;
   box-shadow: 0 7px 18px rgba(83, 83, 83, 0.04); }
@@ -1144,9 +1143,34 @@ a, svg, path, button {
     .slide-card {
       width: 280px;
       margin-bottom: 20px;
-      height: auto; }
+      height: auto;
+      position: relative; }
+      .slide-card:nth-child(1), .slide-card:nth-child(2), .slide-card:nth-child(3) {
+        border-left: 4px solid transparent; }
+      .slide-card:nth-child(4), .slide-card:nth-child(5), .slide-card:nth-child(6) {
+        border-right: 4px solid transparent; }
       .slide-card.active, .slide-card:hover {
-        border: 1px solid #E5F5FF; } }
+        border: 1px solid #E5F5FF; }
+        .slide-card.active:after, .slide-card:hover:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          margin-top: -2.5px;
+          width: 10px;
+          height: 10px;
+          background: #ffffff;
+          border: 1px solid #E5F5FF;
+          border-width: 1px 1px 0 0; }
+        .slide-card.active:nth-child(1), .slide-card.active:nth-child(2), .slide-card.active:nth-child(3), .slide-card:hover:nth-child(1), .slide-card:hover:nth-child(2), .slide-card:hover:nth-child(3) {
+          border-left: 4px solid #009DFF; }
+          .slide-card.active:nth-child(1):after, .slide-card.active:nth-child(2):after, .slide-card.active:nth-child(3):after, .slide-card:hover:nth-child(1):after, .slide-card:hover:nth-child(2):after, .slide-card:hover:nth-child(3):after {
+            right: -5px;
+            transform: rotate(45deg); }
+        .slide-card.active:nth-child(4), .slide-card.active:nth-child(5), .slide-card.active:nth-child(6), .slide-card:hover:nth-child(4), .slide-card:hover:nth-child(5), .slide-card:hover:nth-child(6) {
+          border-right: 4px solid #009DFF; }
+          .slide-card.active:nth-child(4):after, .slide-card.active:nth-child(5):after, .slide-card.active:nth-child(6):after, .slide-card:hover:nth-child(4):after, .slide-card:hover:nth-child(5):after, .slide-card:hover:nth-child(6):after {
+            left: -5px;
+            transform: rotate(-135deg); } }
   .slide-card .header {
     display: flex;
     align-items: center;
@@ -1161,5 +1185,3 @@ a, svg, path, button {
     @media (min-width: 960px) {
       .slide-card .info {
         font-size: 13px; } }
-
-/*# sourceMappingURL=style.css.map */
