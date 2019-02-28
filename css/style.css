@@ -676,13 +676,15 @@ a, svg, path, button {
       width: 380px; } }
 
 .buttons {
-  display: flex;
-  justify-content: center; }
+  display: flex; }
   .buttons .btn:first-child {
     margin-right: 15px; }
   @media (min-width: 700px) {
     .buttons .btn:first-child {
       margin-right: 30px; } }
+
+.buttons-center {
+  justify-content: center; }
 
 /* CONTENT */
 .content-landing {
@@ -963,5 +965,3 @@ a, svg, path, button {
 .menu-footer a {
   color: #676667;
   text-decoration: none; }
-
-/*# sourceMappingURL=style.css.map */
