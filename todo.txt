@@ -1,0 +1,6 @@
+
++ preload images / sprite
+vertical scrollbars
+autoclick
+
+redo icon

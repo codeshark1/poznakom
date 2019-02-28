@@ -241,10 +241,14 @@ label.checkbox {
   background: #fff;
   border-radius: 4px;
   padding: 6px 9px;
-  font-size: 14px;
-  svg {width: 22px !important; margin-right: 10px; vertical-align: middle;}
+  font-size: 13px;
+  svg {width: 22px !important; margin-right: 5px; vertical-align: middle;
 
-  @media (min-width: $screen-sm-min) {padding: 6px 12px;}
+  }
+
+  @media (min-width: $screen-sm-min) {padding: 6px 12px; font-size: 14px;
+    svg {margin-right: 10px;}
+  }
 
 }
 

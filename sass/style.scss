@@ -8,7 +8,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	color: #414042;
-	line-height: 1.5;
+	line-height: 1.6;
 	@media (min-width: $screen-md-min) {font-size: 18px;}
 }
 
@@ -35,11 +35,28 @@ $sect-mg-neg: 39px;
 
 .header-site {
 	background: #00ACFF url('../img/bg.svg') 50% 50% no-repeat;
+	@media (max-width: $screen-xs-max) {
+		background-size: auto 100%;
+	}
+
+	.logo {width: 80px; margin: 0 0 0 10px;
+		@media (min-width: $screen-sm-min) {width: 100px;}
+	}
+} 
+.header-site_i {
+	background: -moz-linear-gradient(-45deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%);
 }
 .h-header {
 	color: #fff;	
 	font-size: 28px; //?
 	font-family: 'iskracyr-medium', sans-serif;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	@media (max-width: $screen-xs-max) {
+		span {display: block;}
+	}
 	@media (min-width: $screen-sm-min) {
 		font-size: 36px; 
 		font-family: 'iskracyr-bold', sans-serif;
@@ -72,12 +89,8 @@ $sect-mg-neg: 39px;
 	}	
 }
 .buttons {
-	display: flex;
-	
-	.btn:first-child {margin-right: 15px;}
-	@media (min-width: $screen-sm-min) {
-		.btn:first-child {margin-right: 30px;}
-	}
+	display: flex;	
+	.btn:first-child {margin-right: 30px;}
 }
 .buttons-center {justify-content: center;}
 
@@ -92,7 +105,12 @@ $sect-mg-neg: 39px;
 	&+.description {margin-top: 20px !important;}
 }
 .h-slide, .h-section, .h-slide-card {font-family: 'iskracyr-medium', sans-serif;}
-.h-section {margin: 0 0 2rem 0; font-size: 2rem;}
+.h-section {margin: 0 0 2rem 0; font-size: 1.6rem;
+	@media (max-width: $screen-xs-max) {
+		span {visibility: hidden; position: absolute; left: -10000000rem;}
+	}
+	@media (min-width: $screen-sm-min) {font-size: 2rem;}
+}
 .h-slide {	
 	font-size: 16px;
 	margin: 0;
@@ -139,29 +157,28 @@ $sect-mg-neg: 39px;
 		max-width: 320px;
 		margin: 0 auto;
 	}
-	.node {
-		//transition: background .15s;
-		position: relative;
-	}
+	.node {position: relative;}
 	.node-1, .node-3 {
 		width: 124px;
 		height: 198px;		
 	}
 	.node-1 {
-		background:url('../img/circle-left.svg') center center no-repeat;
-		left: 25px;		
-		&:hover {background:url('../img/circle-left-active.svg') center center no-repeat;}
+		left: 15px;		
+ 		background: url('../img/circle-left.svg') center center no-repeat;
+		&.active {background-image: url('../img/circle-left-active.svg'); }
+		
 	}
 	.node-2 {
-		background:url('../img/circle-center.svg') center center no-repeat;
+		background: url('../img/circle-center.svg') center center no-repeat;
 		height: 275px;
 		width: 83px;
-		&:hover {background:url('../img/circle-center-active.svg') center center no-repeat;}
+		&.active {background-image: url('../img/circle-center-active.svg');}
 	}	
 	.node-3 {
-		background:url('../img/circle-right.svg') center center no-repeat;
-		right: 25px;
-		&:hover {background:url('../img/circle-right-active.svg') center center no-repeat;}
+		background: url('../img/circle-right.svg') center center no-repeat;
+		right: 15px;
+		&.active {background-image: url('../img/circle-right-active.svg');
+		}
 	}	
 
 	@media (min-width: $screen-sm-min) {
@@ -173,10 +190,23 @@ $sect-mg-neg: 39px;
 	}
 	@media (min-width: $screen-md-min) {
 		height: 680px;	
-		.node-1 {left: 138px}
-		.node-2 {left: 5px}
-		.node-3 {right: 125px}
+		.node-1 {left: 138px;
+			&:hover {background-image: url('../img/circle-left-active.svg'); }
+		}
+		.node-2 {left: 5px;
+			&:hover {background-image: url('../img/circle-center-active.svg');}
+		}
+		.node-3 {right: 125px;
+			&:hover {background-image: url('../img/circle-right-active.svg');}
+		}
 	}
+
+}
+#cicrular-bak {
+	.bak {width: 50px;height: 50px; position: absolute; left: -10000000em; visibility: hidden; z-index: -3;}
+	.bak-1 {background-image: url('../img/circle-left-active.svg');}
+	.bak-1 {background-image: url('../img/circle-center-active.svg');}
+	.bak-1 {background-image: url('../img/circle-right-active.svg');}	
 }
 
 /* КАК ЭТО РАБОТАЕТ */

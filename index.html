@@ -16,27 +16,29 @@
 <![endif]-->
 
 <header class="header-site">
-    <div class="container">
-        <div class="row-header">
-            <div class="col-left">
-                <svg class="logo" data-src="img/logo.svg"></svg>
-                <h1 class="h-header">ПоЗнакомым - твоя сеть полезных знакомств</h1>
-                <div class="buttons">
-                    <a href="#" class="btn btn-header">
-                        <svg class="icon" data-src="img/apple.svg"></svg>
-                        App Store
-                    </a>
-                    <a href="#" class="btn btn-header">
-                        <svg class="icon" data-src="img/googleplay.svg"></svg>
-                        Google Play
-                    </a>                    
-                </div>
-            </div><!-- /.col -->
-            <div class="col-right">
-                <img src="img/phone_top@2x.png" alt="скриншот приложения">
-            </div><!-- /.col -->
-        </div><!-- /.row-header -->
-    </div><!-- /.container -->
+    <div class="header-site_i">
+        <div class="container">
+            <div class="row-header">
+                <div class="col-left">
+                    <svg class="logo" data-src="img/logo.svg"></svg>
+                    <h1 class="h-header"><span>ПоЗнакомым -</span> твоя сеть полезных знакомств</h1>
+                    <div class="buttons">
+                        <a href="#" class="btn btn-header">
+                            <svg class="icon" data-src="img/apple.svg"></svg>
+                            App Store
+                        </a>
+                        <a href="#" class="btn btn-header">
+                            <svg class="icon" data-src="img/googleplay.svg"></svg>
+                            Google Play
+                        </a>                    
+                    </div>
+                </div><!-- /.col -->
+                <div class="col-right">
+                    <img src="img/phone_top@2x.png" alt="скриншот приложения">
+                </div><!-- /.col -->
+            </div><!-- /.row-header -->
+        </div><!-- /.container -->
+    </div><!-- /.header-site_i -->
 </header>
 
 <main class="content-landing">
@@ -57,21 +59,26 @@
                 </div>
             </div><!-- /.row-carousel -->
             <p class="description">Когда нужен надежный специалист - будь то врач, строитель, садовник , юрист или кто-либо еще.
-                    Когда нужен добрый совет, помощь, - мы в первую очередь обращаемся к друзьям и знакомым.
+                    Когда нужен добрый совет, помощь, - мы в первую очередь <b>обращаемся к друзьям и знакомым</b>.
                     Наши друзья, коллеги и просто старые знакомые — это океан возможностей!</p>
         </div><!-- /.container -->
     </section>
 
     <section class="section bg">
         <div class="container">
-            <h2 class="h-section">ПоЗнакомым объединяет друзей и знакомых</h2>
-            <p class="description">Сервис объединяет друзей и знакомых по контактам телефонной книги, чтобы в нужный момент каждый смог найти проверенного специалиста, спросить совета или обратиться за помощью</p>
+            <h2 class="h-section">ПоЗнакомым объединяет <span>друзей и знакомых</span></h2>
+            <p class="description">Сервис объединяет друзей и знакомых <b>по контактам телефонной книги</b>, чтобы в нужный момент каждый смог найти проверенного специалиста, спросить совета или обратиться за помощью</p>
 
             <div id="circular">
                 <div class="node node-1"></div>
                 <div class="node node-2"></div>
-                <div class="node node-3"></div>
+                <div class="node node-3"></div>                
             </div><!-- /#circular -->
+            <div id="cicrular-bak">
+                <div class="bak bak-1"></div>
+                <div class="bak bak-2"></div>
+                <div class="bak bak-3"></div>                
+            </div>
         </div><!-- /.container -->
     </section>    
     
@@ -214,7 +221,7 @@
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         mobileFirst: true,
-                        adaptiveHeight:true,
+                        //adaptiveHeight:true,
                         dots: true,
                         arrows: false,
                         autoplay:true
@@ -257,6 +264,23 @@
         });        
     });
     
+    $('#circular').find('.node').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');        
+    });
+
+    function clicking() {
+        if( $('#circular').find('.active').length ) {            
+            if ( $('#circular').find('.active').next().length ) {
+                $('#circular').find('.active').next().addClass('active').siblings().removeClass('active');
+            } else {
+                $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
+            }
+        } else {            
+            $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
+        }
+    }
+
+    setInterval(clicking, 1500);
 </script>
 
 </body>

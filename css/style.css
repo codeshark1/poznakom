@@ -287,16 +287,19 @@ label.checkbox a {
   background: #fff;
   border-radius: 4px;
   padding: 6px 9px;
-  font-size: 14px; }
+  font-size: 13px; }
   .btn:hover {
     cursor: pointer; }
   .btn svg {
     width: 22px !important;
-    margin-right: 10px;
+    margin-right: 5px;
     vertical-align: middle; }
   @media (min-width: 700px) {
     .btn {
-      padding: 6px 12px; } }
+      padding: 6px 12px;
+      font-size: 14px; }
+      .btn svg {
+        margin-right: 10px; } }
 
 @media (min-width: 700px) {
   .btn-header {
@@ -612,7 +615,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #414042;
-  line-height: 1.5; }
+  line-height: 1.6; }
   @media (min-width: 960px) {
     body {
       font-size: 18px; } }
@@ -638,11 +641,30 @@ a, svg, path, button {
    ========================================================================== */
 .header-site {
   background: #00ACFF url("../img/bg.svg") 50% 50% no-repeat; }
+  @media (max-width: 699px) {
+    .header-site {
+      background-size: auto 100%; } }
+  .header-site .logo {
+    width: 80px;
+    margin: 0 0 0 10px; }
+    @media (min-width: 700px) {
+      .header-site .logo {
+        width: 100px; } }
+
+.header-site_i {
+  background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%); }
 
 .h-header {
   color: #fff;
   font-size: 28px;
-  font-family: 'iskracyr-medium', sans-serif; }
+  font-family: 'iskracyr-medium', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px; }
+  @media (max-width: 699px) {
+    .h-header span {
+      display: block; } }
   @media (min-width: 700px) {
     .h-header {
       font-size: 36px;
@@ -678,10 +700,7 @@ a, svg, path, button {
 .buttons {
   display: flex; }
   .buttons .btn:first-child {
-    margin-right: 15px; }
-  @media (min-width: 700px) {
-    .buttons .btn:first-child {
-      margin-right: 30px; } }
+    margin-right: 30px; }
 
 .buttons-center {
   justify-content: center; }
@@ -704,7 +723,15 @@ a, svg, path, button {
 
 .h-section {
   margin: 0 0 2rem 0;
-  font-size: 2rem; }
+  font-size: 1.6rem; }
+  @media (max-width: 699px) {
+    .h-section span {
+      visibility: hidden;
+      position: absolute;
+      left: -10000000rem; } }
+  @media (min-width: 700px) {
+    .h-section {
+      font-size: 2rem; } }
 
 .h-slide {
   font-size: 16px;
@@ -761,21 +788,21 @@ a, svg, path, button {
     width: 124px;
     height: 198px; }
   #circular .node-1 {
-    background: url("../img/circle-left.svg") center center no-repeat;
-    left: 25px; }
-    #circular .node-1:hover {
-      background: url("../img/circle-left-active.svg") center center no-repeat; }
+    left: 15px;
+    background: url("../img/circle-left.svg") center center no-repeat; }
+    #circular .node-1.active {
+      background-image: url("../img/circle-left-active.svg"); }
   #circular .node-2 {
     background: url("../img/circle-center.svg") center center no-repeat;
     height: 275px;
     width: 83px; }
-    #circular .node-2:hover {
-      background: url("../img/circle-center-active.svg") center center no-repeat; }
+    #circular .node-2.active {
+      background-image: url("../img/circle-center-active.svg"); }
   #circular .node-3 {
     background: url("../img/circle-right.svg") center center no-repeat;
-    right: 25px; }
-    #circular .node-3:hover {
-      background: url("../img/circle-right-active.svg") center center no-repeat; }
+    right: 15px; }
+    #circular .node-3.active {
+      background-image: url("../img/circle-right-active.svg"); }
   @media (min-width: 700px) {
     #circular {
       height: 605px;
@@ -797,10 +824,30 @@ a, svg, path, button {
       height: 680px; }
       #circular .node-1 {
         left: 138px; }
+        #circular .node-1:hover {
+          background-image: url("../img/circle-left-active.svg"); }
       #circular .node-2 {
         left: 5px; }
+        #circular .node-2:hover {
+          background-image: url("../img/circle-center-active.svg"); }
       #circular .node-3 {
-        right: 125px; } }
+        right: 125px; }
+        #circular .node-3:hover {
+          background-image: url("../img/circle-right-active.svg"); } }
+
+#cicrular-bak .bak {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: -10000000em;
+  visibility: hidden;
+  z-index: -3; }
+#cicrular-bak .bak-1 {
+  background-image: url("../img/circle-left-active.svg"); }
+#cicrular-bak .bak-1 {
+  background-image: url("../img/circle-center-active.svg"); }
+#cicrular-bak .bak-1 {
+  background-image: url("../img/circle-right-active.svg"); }
 
 /* КАК ЭТО РАБОТАЕТ */
 .howitworks {
@@ -965,3 +1012,5 @@ a, svg, path, button {
 .menu-footer a {
   color: #676667;
   text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
