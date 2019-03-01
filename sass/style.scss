@@ -20,7 +20,7 @@ a, svg, path, button {transition: all .15s;}
 .container {
 	padding: 0 16px;
 	margin: 0 auto;
-	@media (min-width: $screen-sm-min) {width: 720px;}
+	@media (min-width: $screen-sm-min) {width: 700px;}
 	@media (min-width: $screen-md-min) {width: 980px;}
 	
 }

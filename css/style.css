@@ -234,7 +234,7 @@ label.checkbox a {
   display: block;
   margin: 0 auto 20px; }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .alignleft, .alignright {
     display: inline-block;
     max-width: 75%; }
@@ -253,7 +253,7 @@ label.checkbox a {
 
 .centered-mob {
   text-align: center; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .centered-mob {
       text-align: left; } }
 
@@ -294,17 +294,17 @@ label.checkbox a {
     width: 22px !important;
     margin-right: 5px;
     vertical-align: middle; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .btn {
       padding: 6px 12px;
       font-size: 14px; }
       .btn svg {
         margin-right: 10px; } }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .btn-header {
     padding: 15px 22px; } }
-@media (min-width: 960px) {
+@media (min-width: 1040px) {
   .btn-header {
     font-size: 22px; } }
 
@@ -328,7 +328,7 @@ h1, h2, h3, h4 {
     width: 64px;
     background: rgba(0, 0, 0, 0.3);
     margin-top: 12px; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .h-index {
       font-size: 1.7rem; } }
 
@@ -388,7 +388,7 @@ h1, h2, h3, h4 {
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
-@media (max-width: 699px) {
+@media (max-width: 799px) {
   .sidebar-site {
     margin-bottom: 24px; } }
 
@@ -616,7 +616,7 @@ body {
   font-size: 14px;
   color: #414042;
   line-height: 1.6; }
-  @media (min-width: 960px) {
+  @media (min-width: 1040px) {
     body {
       font-size: 18px; } }
 
@@ -629,10 +629,10 @@ a, svg, path, button {
 .container {
   padding: 0 16px;
   margin: 0 auto; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .container {
-      width: 720px; } }
-  @media (min-width: 960px) {
+      width: 700px; } }
+  @media (min-width: 1040px) {
     .container {
       width: 980px; } }
 
@@ -641,13 +641,13 @@ a, svg, path, button {
    ========================================================================== */
 .header-site {
   background: #00ACFF url("../img/bg.svg") 50% 50% no-repeat; }
-  @media (max-width: 699px) {
+  @media (max-width: 799px) {
     .header-site {
       background-size: auto 100%; } }
   .header-site .logo {
     width: 80px;
     margin: 0 0 0 10px; }
-    @media (min-width: 700px) {
+    @media (min-width: 800px) {
       .header-site .logo {
         width: 100px; } }
 
@@ -662,23 +662,23 @@ a, svg, path, button {
   font-family: 'iskracyr-medium', sans-serif;
   line-height: 1.5;
   letter-spacing: 1px; }
-  @media (max-width: 699px) {
+  @media (max-width: 799px) {
     .h-header span {
       display: block; } }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .h-header {
       font-size: 36px;
       font-family: 'iskracyr-bold', sans-serif; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1040px) {
     .h-header {
       font-size: 44px; } }
 
-@media (max-width: 699px) {
+@media (max-width: 799px) {
   .row-header .col-right {
     display: none; } }
 .row-header .col-left {
   padding: 64px 0 60px; }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .row-header {
     display: flex;
     padding-top: 60px; }
@@ -690,7 +690,7 @@ a, svg, path, button {
       flex-shrink: 0; }
       .row-header .col-right img {
         display: block; } }
-@media (min-width: 960px) {
+@media (min-width: 1040px) {
   .row-header {
     padding-top: 100px;
     display: flex; }
@@ -709,7 +709,7 @@ a, svg, path, button {
 .content-landing {
   text-align: center; }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .row-carousel {
     display: flex;
     justify-content: space-between; }
@@ -724,19 +724,19 @@ a, svg, path, button {
 .h-section {
   margin: 0 0 2rem 0;
   font-size: 1.6rem; }
-  @media (max-width: 699px) {
+  @media (max-width: 799px) {
     .h-section span {
       visibility: hidden;
       position: absolute;
       left: -10000000rem; } }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .h-section {
       font-size: 2rem; } }
 
 .h-slide {
   font-size: 16px;
   margin: 0; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .h-slide {
       font-size: 18px; } }
   .h-slide.h-dash {
@@ -754,7 +754,7 @@ a, svg, path, button {
 
 .h-slide + .img-slide {
   margin-top: 30px; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .h-slide + .img-slide {
       margin-top: 40px; } }
 
@@ -765,7 +765,7 @@ a, svg, path, button {
 
 .section {
   padding: 50px 0; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .section {
       padding: 75px 0; } }
   .section.bg {
@@ -778,7 +778,7 @@ a, svg, path, button {
   justify-content: space-between;
   align-items: center;
   background-size: 105px 75px; }
-  @media (max-width: 699px) {
+  @media (max-width: 799px) {
     #circular {
       max-width: 320px;
       margin: 0 auto; } }
@@ -803,7 +803,7 @@ a, svg, path, button {
     right: 15px; }
     #circular .node-3.active {
       background-image: url("../img/circle-right-active.svg"); }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     #circular {
       height: 605px;
       background-size: 245px 170px; }
@@ -819,7 +819,7 @@ a, svg, path, button {
         right: 50px;
         width: 317px;
         height: 510px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1040px) {
     #circular {
       height: 680px; }
       #circular .node-1 {
@@ -863,10 +863,10 @@ a, svg, path, button {
     padding: 40px 25px 0 20px; */ }
     .howitworks .device.visible {
       display: inherit; }
-    @media (min-width: 700px) {
+    @media (min-width: 800px) {
       .howitworks .device {
         width: 210px; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1040px) {
       .howitworks .device {
         width: 280px; } }
     .howitworks .device .button {
@@ -880,7 +880,7 @@ a, svg, path, button {
       right: 0;
       bottom: 24px;
       margin: auto; }
-  @media (min-width: 960px) {
+  @media (min-width: 1040px) {
     .howitworks {
       position: relative; }
       .howitworks .device {
@@ -894,10 +894,10 @@ a, svg, path, button {
   padding: 0;
   width: 100%; }
 
-@media (max-width: 959px) {
+@media (max-width: 1039px) {
   .row-carousel-2 {
     margin-top: 25px; } }
-@media (min-width: 960px) {
+@media (min-width: 1040px) {
   .row-carousel-2 {
     display: flex;
     flex-direction: column;
@@ -917,23 +917,23 @@ a, svg, path, button {
   padding: 20px;
   text-align: left;
   box-shadow: 0 7px 18px rgba(83, 83, 83, 0.04); }
-  @media (max-width: 699px) {
+  @media (max-width: 799px) {
     .slide-card {
       margin: 0 15px; } }
-  @media (max-width: 959px) {
+  @media (max-width: 1039px) {
     .slide-card {
       border-left: 4px solid transparent; }
       .slide-card.slick-current {
         border-left: 4px solid #009DFF; }
         .slide-card.slick-current .icon path, .slide-card.slick-current .icon rect {
           fill: #009DFF; } }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .slide-card {
       height: 180px; } }
-  @media (min-width: 700px) and (max-width: 959px) {
+  @media (min-width: 800px) and (max-width: 1039px) {
     .slide-card {
       margin: 0 12px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1040px) {
     .slide-card {
       width: 280px;
       margin-bottom: 20px;
@@ -980,7 +980,7 @@ a, svg, path, button {
     line-height: 1.3; }
   .slide-card .info {
     font-size: 11px; }
-    @media (min-width: 960px) {
+    @media (min-width: 1040px) {
       .slide-card .info {
         font-size: 13px; } }
 
@@ -990,23 +990,23 @@ a, svg, path, button {
 .footer-site {
   background: #F8F8F8;
   padding: 30px 0; }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .footer-site {
       padding: 35px 0 15px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1040px) {
     .footer-site {
       padding: 60px 0 40px; } }
 
 .row-footer .col-1 {
   margin-bottom: 20px; }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .row-footer {
     display: flex;
     justify-content: space-between; }
     .row-footer .col-1 {
       margin-right: 40px; } }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .menu-footer {
     columns: 2; } }
 .menu-footer .menu-item {

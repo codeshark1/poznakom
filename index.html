@@ -214,7 +214,7 @@
     $(window).on('load resize orientationchange', function() {
         $('.row-carousel').each(function(){
             var $carousel = $(this);
-            if ($(window).width() > 700) {
+            if ($(window).width() >= 800) {
                 if ($carousel.hasClass('slick-initialized')) {
                     $carousel.slick('unslick');
                 }
@@ -235,7 +235,7 @@
 
         $('.row-carousel-2').each(function(){
             var $carousel = $(this);
-            if ($(window).width() > 960) {
+            if ($(window).width() >= 1040) {
                 if ($carousel.hasClass('slick-initialized')) {
                     $carousel.slick('unslick');
                 }
@@ -286,7 +286,7 @@
 
 
     $('#slides').find('.slide-card').click(function(){
-        if ( $(window).width() >= 960 ) {
+        if ( $(window).width() >= 1040 ) {
             $(this).addClass('active').siblings().removeClass('active');     
             console.log($(this).attr('id'));
             $('#device').find("div[data-id='" + $(this).data('id') +"']").addClass('visible').siblings().removeClass('visible');
