@@ -111,47 +111,50 @@
  
             <div class="howitworks">
                 <div id="device">
-                    <div class="device">
-                        <img class="image" src="img/howitworks1.jpg" alt="pic">
-                    </div>
+                    <div class="device" data-id="slide-1"><img class="image" src="img/howitworks1.jpg" alt="pic"></div>
+                    <div class="device" data-id="slide-2"><img class="image" src="img/howitworks2.jpg" alt="pic"></div>
+                    <div class="device" data-id="slide-3"><img class="image" src="img/howitworks1.jpg" alt="pic"></div>
+                    <div class="device" data-id="slide-4"><img class="image" src="img/howitworks2.jpg" alt="pic"></div>
+                    <div class="device" data-id="slide-5"><img class="image" src="img/howitworks1.jpg" alt="pic"></div>
+                    <div class="device" data-id="slide-6"><img class="image" src="img/howitworks2.jpg" alt="pic"></div>
                 </div>                
-                <div class="row-carousel-2">
-                    <div class="slide-card">
+                <div class="row-carousel-2" id="slides">
+                    <div class="slide-card" id="slide-1">
                         <div class="header">
                             <span class="icon"><svg data-src="img/howitworks-1.svg"></svg></span>
                             <p class="h-slide-card">Личная сеть знакомых</p>
                         </div>
                         <p class="info">Используя <a href="#">двусторонние контакты</a> телефонной книги, сервис построит твою персональную сеть знакомых. При желании можно <a href="#">ограничь доступ</a> вручную.</p>
                     </div><!-- /.slide-card -->
-                    <div class="slide-card">
+                    <div class="slide-card" id="slide-2">
                         <div class="header">
                             <span class="icon"><svg data-src="img/howitworks-2.svg"></svg></span>
                             <p class="h-slide-card">Лента визиток</p>
                         </div>
                         <p class="info">Хочешь рассказать о своих услугах или профессиональной деятельности? Просто создай Визитку! Визитки знакомых и их друзей отображаются в ленте.</p>
                     </div><!-- /.slide-card -->
-                    <div class="slide-card">
+                    <div class="slide-card" id="slide-3">
                         <div class="header">
                             <span class="icon"><svg data-src="img/howitworks-3.svg"></svg></span>
                             <p class="h-slide-card">Отзывы знакомых</p>
                         </div>
                         <p class="info">Отзывы к Визиткам заслуживают доверия – ведь они оставлены знакомыми! </p>
                     </div><!-- /.slide-card -->
-                    <div class="slide-card">
+                    <div class="slide-card" id="slide-4">
                         <div class="header">
                             <span class="icon"><svg data-src="img/howitworks-4.svg"></svg></span>
                             <p class="h-slide-card">Цепочки знакомств</p>
                         </div>
                         <p class="info">Запрашивай рекомендации у знакомых. Используй цепочку знакомств, которая подскажет кто из знакомых знает нужного тебе специалиста.</p>
                     </div><!-- /.slide-card -->
-                    <div class="slide-card">
+                    <div class="slide-card" id="slide-5">
                         <div class="header">
                             <span class="icon"><svg data-src="img/howitworks-5.svg"></svg></span>
                             <p class="h-slide-card">Лента Запросов</p>
                         </div>
                         <p class="info">Не нашел нужного специалиста? Нужен добрый совет? Просто создай Запрос, и кто-нибудь из знакомых обязательно откликнется.</p>
                     </div><!-- /.slide-card -->
-                    <div class="slide-card">
+                    <div class="slide-card" id="slide-6">
                         <div class="header">
                             <span class="icon"><svg data-src="img/howitworks-6.svg"></svg></span>
                             <p class="h-slide-card">Безопасность данных</p>
@@ -267,8 +270,28 @@
     $('#circular').find('.node').click(function(){
         $(this).addClass('active').siblings().removeClass('active');        
     });
+    function clickingCircle() {
+        if( $('#circular').find('.active').length ) {            
+            if ( $('#circular').find('.active').next().length ) {
+                $('#circular').find('.active').next().addClass('active').siblings().removeClass('active');
+            } else {
+                $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
+            }
+        } else {            
+            $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
+        }
+    }
+    setInterval(clickingCircle, 1500);
 
-    function clicking() {
+
+
+    $('#slides').find('.slide-card').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');     
+        console.log($(this).attr('id'));
+        $('.howitworks').find("div[data-id='" + $(this).attr('id') +"']").addClass('visible').siblings().removeClass('visible');
+    });
+
+    function clickingSlides() {
         if( $('#circular').find('.active').length ) {            
             if ( $('#circular').find('.active').next().length ) {
                 $('#circular').find('.active').next().addClass('active').siblings().removeClass('active');
@@ -280,7 +303,7 @@
         }
     }
 
-    setInterval(clicking, 1500);
+    //setInterval(clickingCircle, 1500);     
 </script>
 
 </body>

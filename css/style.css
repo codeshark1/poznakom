@@ -885,7 +885,10 @@ a, svg, path, button {
         left: 0;
         top: 0;
         right: 0;
-        margin: auto; } }
+        margin: auto;
+        visibility: hidden; }
+        .howitworks .device.visible {
+          visibility: visible; } }
 
 #test {
   padding: 0;
@@ -898,18 +901,13 @@ a, svg, path, button {
   .row-carousel-2 {
     display: flex;
     flex-direction: column;
-    height: 605px;
+    height: 625px;
     width: 100%;
     flex-wrap: wrap; }
     .row-carousel-2 .slide-card {
       padding: 20px 20px 25px 20px; }
       .row-carousel-2 .slide-card:nth-child(4), .row-carousel-2 .slide-card:nth-child(5), .row-carousel-2 .slide-card:nth-child(6) {
         align-self: flex-end; } }
-
-@media (max-width: 959px) {
-  .container-carousel {
-    padding: 0;
-    width: 100%; } }
 
 .slide-card {
   background: #fff;
@@ -926,7 +924,9 @@ a, svg, path, button {
     .slide-card {
       border-left: 4px solid transparent; }
       .slide-card.slick-current {
-        border-left: 4px solid #009DFF; } }
+        border-left: 4px solid #009DFF; }
+        .slide-card.slick-current .icon path, .slide-card.slick-current .icon rect {
+          fill: #009DFF; } }
   @media (min-width: 700px) {
     .slide-card {
       height: 180px; } }
@@ -945,6 +945,8 @@ a, svg, path, button {
         border-right: 4px solid transparent; }
       .slide-card.active, .slide-card:hover {
         border: 1px solid #E5F5FF; }
+        .slide-card.active .icon path, .slide-card.active .icon rect, .slide-card:hover .icon path, .slide-card:hover .icon rect {
+          fill: #009DFF; }
         .slide-card.active:after, .slide-card:hover:after {
           content: "";
           position: absolute;
@@ -1012,5 +1014,3 @@ a, svg, path, button {
 .menu-footer a {
   color: #676667;
   text-decoration: none; }
-
-/*# sourceMappingURL=style.css.map */

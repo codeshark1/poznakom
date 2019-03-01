@@ -232,8 +232,10 @@ $sect-mg-neg: 39px;
 		}
 	}
 	@media (min-width: $screen-md-min) {
-		position: relative;
-		.device {position: absolute; left: 0;top: 0;right: 0; margin: auto;}
+		position: relative;		
+		.device {position: absolute; left: 0;top: 0;right: 0; margin: auto; visibility: hidden;
+			&.visible {visibility: visible}
+		}
 	}
 }
 #test {padding:0; width: 100%}
@@ -244,7 +246,7 @@ $sect-mg-neg: 39px;
 	@media (min-width: $screen-md-min) {
 		display: flex;
 		flex-direction: column;
-		height: 605px;
+		height: 625px;
 		width: 100%;
 		flex-wrap: wrap;		
 		.slide-card {
@@ -253,12 +255,7 @@ $sect-mg-neg: 39px;
 		}
 	}
 }
-.container-carousel {
-	@media (max-width: $screen-sm-max) {
-		padding: 0;
-		width: 100%;
-	}
-}
+
 .slide-card {
 	background: #fff;
 	border-radius: 4px;
@@ -273,7 +270,9 @@ $sect-mg-neg: 39px;
 	}	
 	@media (max-width: $screen-sm-max) {
 		border-left: 4px solid transparent;
-		&.slick-current {border-left: 4px solid $main;}
+		&.slick-current {border-left: 4px solid $main;
+			.icon {path, rect {fill: $main;}}
+		}
 	}
 
 	@media (min-width: $screen-sm-min) {		
@@ -292,6 +291,7 @@ $sect-mg-neg: 39px;
 		&:nth-child(4),&:nth-child(5),&:nth-child(6) {border-right: 4px solid transparent;}
 		&.active, &:hover {
 			border: 1px solid #E5F5FF;
+			.icon {path, rect {fill: $main;}}
 			&:after {
 				content: "";
 				position: absolute;
