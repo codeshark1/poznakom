@@ -857,7 +857,7 @@ a, svg, path, button {
     border-radius: 30px;
     width: 175px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 5px auto 0;
     display: none;
     /*position: relative;
     padding: 40px 25px 0 20px; */ }

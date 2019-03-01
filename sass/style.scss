@@ -211,13 +211,13 @@ $sect-mg-neg: 39px;
 
 /* КАК ЭТО РАБОТАЕТ */
 .howitworks {
-	overflow: hidden;
+	overflow: hidden;	
 	.device {
 		box-shadow: 0 -2px 4px rgba(#CCCDD4,.5);
 		border-radius: 30px;		
 		width: 175px;
 		overflow: hidden;
-		margin: 0 auto;
+		margin: 5px auto 0;
 		display: none;			
 		&.visible {display: inherit}
 		@media (min-width: $screen-sm-min) {width: 210px;}
