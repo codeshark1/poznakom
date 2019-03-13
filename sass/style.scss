@@ -79,7 +79,7 @@ $sect-mg-neg: 39px;
 			flex-direction: column;
 			justify-content: flex-end;
 			flex-shrink: 0;
-			img {display: block;}
+			img {max-width: 100%; min-height: 100%;}
 		}
 	}
 	@media (min-width: $screen-md-min) {
@@ -213,10 +213,10 @@ $sect-mg-neg: 39px;
 .howitworks {
 	overflow: hidden;	
 	.device {
-		box-shadow: 0 -2px 4px rgba(#CCCDD4,.5);
+		/* box-shadow: 0 -2px 4px rgba(#CCCDD4,.5);
 		border-radius: 30px;		
+		overflow: hidden; */
 		width: 175px;
-		overflow: hidden;
 		margin: 5px auto 0;
 		display: none;			
 		&.visible {display: inherit}

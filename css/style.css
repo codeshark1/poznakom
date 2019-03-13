@@ -689,7 +689,8 @@ a, svg, path, button {
       justify-content: flex-end;
       flex-shrink: 0; }
       .row-header .col-right img {
-        display: block; } }
+        max-width: 100%;
+        min-height: 100%; } }
 @media (min-width: 1040px) {
   .row-header {
     padding-top: 100px;
@@ -853,10 +854,10 @@ a, svg, path, button {
 .howitworks {
   overflow: hidden; }
   .howitworks .device {
-    box-shadow: 0 -2px 4px rgba(204, 205, 212, 0.5);
-    border-radius: 30px;
+    /* box-shadow: 0 -2px 4px rgba(#CCCDD4,.5);
+    border-radius: 30px;		
+    overflow: hidden; */
     width: 175px;
-    overflow: hidden;
     margin: 5px auto 0;
     display: none;
     /*position: relative;
