@@ -251,7 +251,6 @@
                         slidesToShow: 3,
                         centerPadding: '12px',
                         appendDots: $('#device'),
-                        autoplay:true,
                         centerMode: true,
                         responsive: [                                              
                             {
@@ -268,9 +267,12 @@
         });        
     });
     
-    $('#circular').find('.node').click(function(){
-        $(this).addClass('active').siblings().removeClass('active');        
+    $('#circular').find('.node').hover(function(){
+        if ($(window).width() >= 1040 ) {
+            $(this).addClass('active').siblings().removeClass('active');
+        }
     });
+    $('#circular').find('.node:first-child').mouseenter();
     function clickingCircle() {
         if( $('#circular').find('.active').length ) {            
             if ( $('#circular').find('.active').next().length ) {
@@ -282,30 +284,26 @@
             $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
         }
     }
-    setInterval(clickingCircle, 1500);
+
+    
+    if ($(window).width() < 1040 ) {
+        setInterval(clickingCircle, 1500);
+    }
 
 
 
-    $('#slides').find('.slide-card').click(function(){
-        if ( $(window).width() >= 1040 ) {
-            $(this).addClass('active').siblings().removeClass('active');     
-            console.log($(this).attr('id'));
-            $('#device').find("div[data-id='" + $(this).data('id') +"']").addClass('visible').siblings().removeClass('visible');
-        }
+    /* how it works */
+    $(document).ready(function(){
+        $('.howitworks').find('.device').hide();
     });
 
-    function clickingSlides() {
-        if( $('#slides').find('.active').length ) {            
-            if ( $('#slides').find('.active').next().length ) {
-                $('#slides').find('.active').next().click();
-            } else {
-                $('#slides').find('.slide-card:first-child').click();
-            }
-        } else {            
-            $('#slides').find('.slide-card:first-child').click();
+    $('#slides').find('.slide-card').hover(function(){
+        if ( $(window).width() >= 1040 ) {
+            $(this).addClass('active').siblings().removeClass('active');  
+            $('#device').find("div[data-id='" + $(this).data('id') +"']").addClass('visible').siblings().removeClass('visible');
         }
-    }
-    setInterval(clickingSlides, 2000);     
+    });  
+    $('#slides').find('.slide-card:first-child').mouseenter();
 
     $(".howitworks").on('DOMSubtreeModified', "#slides", function() {
         var currentSlide = $('#slides').find('.slick-current').data('id');

@@ -859,11 +859,10 @@ a, svg, path, button {
     overflow: hidden; */
     width: 175px;
     margin: 5px auto 0;
-    display: none;
     /*position: relative;
     padding: 40px 25px 0 20px; */ }
     .howitworks .device.visible {
-      display: inherit; }
+      display: inherit !important; }
     @media (min-width: 800px) {
       .howitworks .device {
         width: 210px; } }

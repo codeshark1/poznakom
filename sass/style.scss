@@ -217,9 +217,8 @@ $sect-mg-neg: 39px;
 		border-radius: 30px;		
 		overflow: hidden; */
 		width: 175px;
-		margin: 5px auto 0;
-		display: none;			
-		&.visible {display: inherit}
+		margin: 5px auto 0;		
+		&.visible {display: inherit !important}
 		@media (min-width: $screen-sm-min) {width: 210px;}
 		@media (min-width: $screen-md-min) {width: 280px;}
 		/*position: relative;
