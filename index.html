@@ -272,7 +272,10 @@
             $(this).addClass('active').siblings().removeClass('active');
         }
     });
-    $('#circular').find('.node:first-child').mouseenter();
+    $(document).ready(function(){
+        $('#circular').find('.node:first-child').mouseenter();
+    });
+
     function clickingCircle() {
         if( $('#circular').find('.active').length ) {            
             if ( $('#circular').find('.active').next().length ) {
@@ -284,8 +287,6 @@
             $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
         }
     }
-
-    
     if ($(window).width() < 1040 ) {
         setInterval(clickingCircle, 1500);
     }

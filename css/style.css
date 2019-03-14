@@ -824,17 +824,14 @@ a, svg, path, button {
     #circular {
       height: 680px; }
       #circular .node-1 {
-        left: 138px; }
-        #circular .node-1:hover {
-          background-image: url("../img/circle-left-active.svg"); }
+        left: 138px;
+        /* &:hover {background-image: url('../img/circle-left-active.svg'); } */ }
       #circular .node-2 {
-        left: 5px; }
-        #circular .node-2:hover {
-          background-image: url("../img/circle-center-active.svg"); }
+        left: 5px;
+        /* &:hover {background-image: url('../img/circle-center-active.svg');} */ }
       #circular .node-3 {
-        right: 125px; }
-        #circular .node-3:hover {
-          background-image: url("../img/circle-right-active.svg"); } }
+        right: 125px;
+        /* &:hover {background-image: url('../img/circle-right-active.svg');} */ } }
 
 #cicrular-bak .bak {
   width: 50px;
@@ -1016,3 +1013,5 @@ a, svg, path, button {
 .menu-footer a {
   color: #676667;
   text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
