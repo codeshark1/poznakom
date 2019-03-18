@@ -272,7 +272,7 @@
             $(this).addClass('active').siblings().removeClass('active');
         }
     });
-    $(document).ready(function(){
+    $(window).on('load', function(){
         $('#circular').find('.node:first-child').mouseenter();
     });
 
