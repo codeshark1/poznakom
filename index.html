@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic-ext" rel="stylesheet">     
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/plugins.js"></script>    
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -20,7 +19,6 @@
         <div class="container">
             <div class="row-header">
                 <div class="col-left">
-                    <!-- <svg class="logo" data-src="img/logo.svg"></svg> -->
                     <img class="logo" src="img/logo.png"></img>
                     <h1 class="h-header"><span>ПоЗнакомым -</span> твоя сеть полезных знакомств</h1>
                     <div class="buttons">
@@ -100,7 +98,7 @@
                     <div class="img-slide"><svg data-src="img/resolved-3.svg"></svg></div>
                     <p class="h-slide h-dash">Попроси совета</p>
                     <p>Спроси совета у друзей и их знакомых и кто-нибудь обязательно откликнется!</p>
-                </div>                                                 
+                </div>
             </div><!-- /.row-carousel -->
         </div><!-- /.container -->
     </section>    
@@ -112,12 +110,12 @@
  
             <div class="howitworks">
                 <div id="device">
-                    <div class="device" data-id="slide-1"><img class="image" src="img/im_phone_scr_1.png" alt="pic"></div>
-                    <div class="device" data-id="slide-2"><img class="image" src="img/im_phone_scr_2.png" alt="pic"></div>
-                    <div class="device" data-id="slide-3"><img class="image" src="img/im_phone_scr_3.png" alt="pic"></div>
-                    <div class="device" data-id="slide-4"><img class="image" src="img/im_phone_scr_4.png" alt="pic"></div>
-                    <div class="device" data-id="slide-5"><img class="image" src="img/im_phone_scr_5.png" alt="pic"></div>
-                    <div class="device" data-id="slide-6"><img class="image" src="img/im_phone_scr_6.png" alt="pic"></div>
+                    <div class="device" data-id="slide-1"><img class="image" src="img/im_phone_scr_1@2x.png" alt="pic"></div>
+                    <div class="device" data-id="slide-2"><img class="image" src="img/im_phone_scr_2@2x.png" alt="pic"></div>
+                    <div class="device" data-id="slide-3"><img class="image" src="img/im_phone_scr_3@2x.png" alt="pic"></div>
+                    <div class="device" data-id="slide-4"><img class="image" src="img/im_phone_scr_4@2x.png" alt="pic"></div>
+                    <div class="device" data-id="slide-5"><img class="image" src="img/im_phone_scr_5@2x.png" alt="pic"></div>
+                    <div class="device" data-id="slide-6"><img class="image" src="img/im_phone_scr_6@2x.png" alt="pic"></div>
                 </div>                
                 <div class="row-carousel-2" id="slides">
                     <div class="slide-card" data-id="slide-1">
@@ -186,8 +184,6 @@
     </section>
 </main>
 
-
-
 <footer class="footer-site">
     <div class="container">
         <div class="row-footer">
@@ -208,109 +204,6 @@
     </div><!-- /.container -->
 </footer>
 
-<script>
-    new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));        
-
-
-    $(window).on('load resize orientationchange', function() {
-        $('.row-carousel').each(function(){
-            var $carousel = $(this);
-            if ($(window).width() >= 800) {
-                if ($carousel.hasClass('slick-initialized')) {
-                    $carousel.slick('unslick');
-                }
-            } else{
-                if (!$carousel.hasClass('slick-initialized')) {
-                    $carousel.slick({
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        mobileFirst: true,
-                        //adaptiveHeight:true,
-                        dots: true,
-                        arrows: false,
-                        autoplay:true
-                    });
-                }
-            }
-        });
-
-        $('.row-carousel-2').each(function(){
-            var $carousel = $(this);
-            if ($(window).width() >= 1040) {
-                if ($carousel.hasClass('slick-initialized')) {
-                    $carousel.slick('unslick');
-                }
-            }else{
-                if (!$carousel.hasClass('slick-initialized')) {
-                    $carousel.slick({                        
-                        slidesToScroll: 1,
-                        adaptiveHeight:true,
-                        dots: true,
-                        arrows: false,
-                        infinite: true,
-                        slidesToShow: 3,
-                        centerPadding: '12px',
-                        appendDots: $('#device'),
-                        centerMode: true,
-                        responsive: [                                              
-                            {
-                                breakpoint: 700,
-                                centerMode: false,
-                                settings: {
-                                    slidesToShow: 1
-                                }
-                            }
-                        ]
-                    });
-                }
-            }
-        });        
-    });
-    
-    $('#circular').find('.node').hover(function(){
-        if ($(window).width() >= 1040 ) {
-            $(this).addClass('active').siblings().removeClass('active');
-        }
-    });
-    $(window).on('load', function(){
-        $('#circular').find('.node:first-child').mouseenter();
-    });
-
-    function clickingCircle() {
-        if( $('#circular').find('.active').length ) {            
-            if ( $('#circular').find('.active').next().length ) {
-                $('#circular').find('.active').next().addClass('active').siblings().removeClass('active');
-            } else {
-                $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
-            }
-        } else {            
-            $('#circular').find('.node:first-child').addClass('active').siblings().removeClass('active');
-        }
-    }
-    if ($(window).width() < 1040 ) {
-        setInterval(clickingCircle, 1500);
-    }
-
-
-
-    /* how it works */
-    $(document).ready(function(){
-        $('.howitworks').find('.device').hide();
-    });
-
-    $('#slides').find('.slide-card').hover(function(){
-        if ( $(window).width() >= 1040 ) {
-            $(this).addClass('active').siblings().removeClass('active');  
-            $('#device').find("div[data-id='" + $(this).data('id') +"']").addClass('visible').siblings().removeClass('visible');
-        }
-    });  
-    $('#slides').find('.slide-card:first-child').mouseenter();
-
-    $(".howitworks").on('DOMSubtreeModified', "#slides", function() {
-        var currentSlide = $('#slides').find('.slick-current').data('id');
-        $('#device').find("div[data-id='" + currentSlide +"']").addClass('visible').siblings().removeClass('visible');
-    });    
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

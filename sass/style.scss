@@ -14,6 +14,7 @@ body {
 
 a {
 	color: $main;
+	&:hover {text-decoration: none;}
 }
 
 a, svg, path, button {transition: all .15s;}
@@ -104,12 +105,16 @@ $sect-mg-neg: 39px;
 	}
 	&+.description {margin-top: 20px !important;}
 }
-.h-slide, .h-section, .h-slide-card {font-family: 'iskracyr-medium', sans-serif;}
-.h-section {margin: 0 0 2rem 0; font-size: 1.6rem;
+.h-slide, .h-section, .h-slide-card, .art-serv h1 {font-family: 'iskracyr-medium', sans-serif;}
+.h-section, .art-serv h1 {
+	font-size: 1.6rem;
+	@media (min-width: $screen-sm-min) {font-size: 2rem;}
+}
+.h-section {margin: 0 0 2rem 0;
 	@media (max-width: $screen-xs-max) {
 		span {visibility: hidden; position: absolute; left: -10000000rem;}
 	}
-	@media (min-width: $screen-sm-min) {font-size: 2rem;}
+	
 }
 .h-slide {	
 	font-size: 16px;
@@ -315,6 +320,32 @@ $sect-mg-neg: 39px;
 	.h-slide-card {line-height: 1.3}
 	.info {font-size: 11px;
 		@media (min-width: $screen-md-min) {font-size: 13px;}
+	}
+}
+
+/* serv */
+.art-serv {
+	padding-top: 3rem;
+	h1 {margin: 0 0 40px 0;}
+	h2 {margin: 0 0 30px 0;}
+	h3 {margin: 0 0 10px 0;}
+	p {text-indent: 40px;}
+	p, ul, ol {margin-bottom: 30px;}
+	p+ul, p+ol {margin-top: -30px;}
+	.welcome, .date {text-indent: 0;}
+	h1+.date {margin-top: -30px;}
+	
+
+	ul {list-style: disc;}
+	ul, ol {padding-left: 40px;}
+	.toc {padding-left: 0; list-style: none; margin: 0 0 60px 0;
+		ul {list-style: none; margin: 0;}
+		li {margin-top: 10px;}
+	}
+
+	ul.nostyle {
+		list-style: none;
+		ul {margin-bottom: 0;}
 	}
 }
 
