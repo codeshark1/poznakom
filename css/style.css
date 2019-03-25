@@ -616,7 +616,8 @@ body {
   font-size: 14px;
   color: #414042;
   line-height: 1.6;
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
   @media (min-width: 800px) {
     body {
       padding-bottom: 180px; } }

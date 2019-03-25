@@ -10,6 +10,7 @@ body {
 	color: #414042;
 	line-height: 1.6;
 	position: relative;
+	min-height: 100%;
 	@media (min-width: $screen-sm-min) {padding-bottom: 180px;}
 	@media (min-width: $screen-md-min) {font-size: 18px; padding-bottom: 230px;}
 }
