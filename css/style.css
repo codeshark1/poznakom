@@ -708,6 +708,13 @@ a, svg, path, button {
 .buttons-center {
   justify-content: center; }
 
+.btn-back {
+  display: inline-block;
+  margin: 20px 0;
+  font-size: 40px;
+  line-height: 1;
+  text-decoration: none; }
+
 /* CONTENT */
 .content-landing {
   text-align: center; }
@@ -986,41 +993,39 @@ a, svg, path, button {
         font-size: 13px; } }
 
 /* serv */
-.art-serv {
-  padding-top: 3rem; }
-  .art-serv h1 {
-    margin: 0 0 40px 0; }
-  .art-serv h2 {
-    margin: 0 0 30px 0; }
-  .art-serv h3 {
-    margin: 0 0 10px 0; }
-  .art-serv p {
-    text-indent: 40px; }
-  .art-serv p, .art-serv ul, .art-serv ol {
-    margin-bottom: 30px; }
-  .art-serv p + ul, .art-serv p + ol {
-    margin-top: -30px; }
-  .art-serv .welcome, .art-serv .date {
-    text-indent: 0; }
-  .art-serv h1 + .date {
-    margin-top: -30px; }
-  .art-serv ul {
-    list-style: disc; }
-  .art-serv ul, .art-serv ol {
-    padding-left: 40px; }
-  .art-serv .toc {
-    padding-left: 0;
+.art-serv h1 {
+  margin: 0 0 40px 0; }
+.art-serv h2 {
+  margin: 0 0 30px 0; }
+.art-serv h3 {
+  margin: 0 0 10px 0; }
+.art-serv p {
+  text-indent: 40px; }
+.art-serv p, .art-serv ul, .art-serv ol {
+  margin-bottom: 30px; }
+.art-serv p + ul, .art-serv p + ol {
+  margin-top: -30px; }
+.art-serv .welcome, .art-serv .date {
+  text-indent: 0; }
+.art-serv h1 + .date {
+  margin-top: -30px; }
+.art-serv ul {
+  list-style: disc; }
+.art-serv ul, .art-serv ol {
+  padding-left: 40px; }
+.art-serv .toc {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 0 60px 0; }
+  .art-serv .toc ul {
     list-style: none;
-    margin: 0 0 60px 0; }
-    .art-serv .toc ul {
-      list-style: none;
-      margin: 0; }
-    .art-serv .toc li {
-      margin-top: 10px; }
-  .art-serv ul.nostyle {
-    list-style: none; }
-    .art-serv ul.nostyle ul {
-      margin-bottom: 0; }
+    margin: 0; }
+  .art-serv .toc li {
+    margin-top: 10px; }
+.art-serv ul.nostyle {
+  list-style: none; }
+  .art-serv ul.nostyle ul {
+    margin-bottom: 0; }
 
 /* ==========================================================================
    FOOTER
