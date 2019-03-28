@@ -456,8 +456,6 @@ h1, h2, h3, h4 {
   display: none; }
   [dir="rtl"] .slick-slide {
     float: right; }
-  .slick-slide img {
-    display: block; }
   .slick-slide.slick-loading img {
     display: none; }
   .slick-slide.dragging img {
@@ -726,7 +724,8 @@ a, svg, path, button {
     display: flex;
     justify-content: space-between; }
     .row-carousel .slide {
-      width: 29%; } }
+      width: 29%;
+      text-align: center; } }
 .row-carousel + .description {
   margin-top: 20px !important; }
 
