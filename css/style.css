@@ -1038,6 +1038,9 @@ a, svg, path, button {
   @media (min-width: 800px) {
     .footer-site {
       padding: 35px 0 15px; } }
+  @media (min-width: 1040px) {
+    .footer-site {
+      padding: 60px 0 40px; } }
 
 .row-footer .col-1 {
   margin-bottom: 20px; }
