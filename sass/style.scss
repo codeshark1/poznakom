@@ -385,7 +385,11 @@ $sect-mg-neg: 39px;
 	@media (min-width: $screen-sm-min) {
 		display: flex;
 		justify-content: space-between;
-		.col-1 {margin-right: 40px;}
+		//.col-1 {margin-right: 40px;}
+		.col-2 {width: 64%;}
+	}
+	@media (min-width: $screen-md-min) {
+		.col-2 {width: 65%;}
 	}
 }
 

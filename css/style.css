@@ -1039,8 +1039,11 @@ a, svg, path, button {
   .row-footer {
     display: flex;
     justify-content: space-between; }
-    .row-footer .col-1 {
-      margin-right: 40px; } }
+    .row-footer .col-2 {
+      width: 64%; } }
+@media (min-width: 1040px) {
+  .row-footer .col-2 {
+    width: 65%; } }
 
 @media (min-width: 800px) {
   .menu-footer {
