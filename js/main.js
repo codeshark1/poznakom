@@ -37,11 +37,11 @@ $(window).on('load resize orientationchange', function() {
                     dots: true,
                     arrows: false,
                     infinite: true,
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     centerPadding: '12px',
-                    appendDots: $('#device'),
-                    centerMode: true,
-                    responsive: [                                              
+                    //appendDots: $('#device'),
+                    centerMode: false,
+/*                     responsive: [                                              
                         {
                             breakpoint: 700,
                             centerMode: false,
@@ -49,7 +49,7 @@ $(window).on('load resize orientationchange', function() {
                                 slidesToShow: 1
                             }
                         }
-                    ]
+                    ] */
                 });
             }
         }
@@ -84,7 +84,7 @@ if ($(window).width() < 1040 ) {
 
 /* how it works */
 $(document).ready(function(){
-    $('.howitworks').find('.device').hide();
+    $('.howitworks').find('.device').css('opacity',0);
 });
 
 $('#slides').find('.slide-card').hover(function(){
@@ -103,6 +103,7 @@ $(".howitworks").on('DOMSubtreeModified', "#slides", function() {
 var $d = $('#device');
 $d.on('swipeleft',function(e,data){
     $d.find('.slick-active').next('li').find('button').click();
+    console.log("it's on");
 }); 
 $d.on('swiperight',function(e,data){
     $d.find('.slick-active').prev('li').find('button').click();
