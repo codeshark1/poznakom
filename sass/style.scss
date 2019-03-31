@@ -232,10 +232,12 @@ $sect-mg-neg: 39px;
 /* КАК ЭТО РАБОТАЕТ */
 .howitworks {
 	overflow: hidden;	
+	@media (max-width: $screen-sm-max) {
+		.device {display: none;}
+		max-width: 600px;
+		margin: 0 auto;
+	}		
 	.device {
-		@media (max-width: $screen-sm-max) {
-			display: none;
-		}		
 		width: 250px;
 		margin: 5px auto 0;		
 		transition: opacity .3s;
