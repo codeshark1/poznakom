@@ -210,15 +210,9 @@ $sect-mg-neg: 39px;
 	}
 	@media (min-width: $screen-md-min) {
 		height: 680px;	
-		.node-1 {left: 138px;
-			/* &:hover {background-image: url('../img/circle-left-active.svg'); } */
-		}
-		.node-2 {left: 5px;
-			/* &:hover {background-image: url('../img/circle-center-active.svg');} */
-		}
-		.node-3 {right: 125px;
-			/* &:hover {background-image: url('../img/circle-right-active.svg');} */
-		}
+		.node-1 {left: 138px;}
+		.node-2 {left: 5px;}
+		.node-3 {right: 125px;}
 	}
 
 }

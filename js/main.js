@@ -99,12 +99,3 @@ $(".howitworks").on('DOMSubtreeModified', "#slides", function() {
     var currentSlide = $('#slides').find('.slick-current').data('id');
     $('#device').find("div[data-id='" + currentSlide +"']").addClass('visible').siblings().removeClass('visible');
 });
-
-var $d = $('#device');
-$d.on('swipeleft',function(e,data){
-    $d.find('.slick-active').next('li').find('button').click();
-    console.log("it's on");
-}); 
-$d.on('swiperight',function(e,data){
-    $d.find('.slick-active').prev('li').find('button').click();
-});    
