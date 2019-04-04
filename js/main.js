@@ -1,4 +1,4 @@
-new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));        
+var md = new MobileDetect(window.navigator.userAgent);
 
 
 $(window).on('load resize orientationchange', function() {
@@ -56,8 +56,8 @@ $(window).on('load resize orientationchange', function() {
     });        
 });
 
-$('#circular').find('.node').hover(function(){
-    if ($(window).width() >= 1040 ) {
+$('#circular').find('.node').mouseenter(function(){
+    if ( $(window).width() >= 1040 && !md.phone() && !md.tablet()) {
         $(this).addClass('active').siblings().removeClass('active');
     }
 });

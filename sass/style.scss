@@ -16,6 +16,9 @@ body {
 		font-size: 18px; 
 		//padding-bottom: 230px;
 	}
+	@media screen and (max-device-width: 480px){
+		-webkit-text-size-adjust: none;
+	}	
 }
 
 a {
@@ -43,7 +46,7 @@ $sect-mg-neg: 39px;
 .header-site {
 	background: #00ACFF url('../img/bg.svg') 50% 50% no-repeat;
 	@media (max-width: $screen-xs-max) {
-		background-size: auto 100%;
+		//background-size: auto 100%;
 	}
 
 	.logo {width: 80px; margin: 0 0 0 10px;
@@ -167,61 +170,69 @@ $sect-mg-neg: 39px;
 
 
 #circular {
-	background: url('../img/explained-bg.svg') 50% 50% no-repeat;
+	background: url('../img/explained-bg.png') 50% 50% no-repeat;
 	height: 275px;	
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-size: 105px 75px;
-
+	position: relative;
+	//display: flex;
+	//justify-content: space-between;
+	//align-items: center;
+	.node {position: absolute;}
+	
 	@media (max-width: $screen-xs-max) {
 		max-width: 320px;
 		margin: 0 auto;
-	}
-	.node {position: relative;}
-	.node-1, .node-3 {
-		width: 124px;
-		height: 198px;		
+		background-size: 140px auto;		
+		.node-1, 
+		.node-3 {
+			width: 124px;			
+			height: 198px;			
+			
+		}
+		.node-1 {background-size: 118px auto !important;			}
+		.node-2 {
+			background-size: 86px auto !important;			
+		}
+		.node-3 {background-size: 123px auto !important;			}
 	}
 	.node-1 {
-		left: 15px;		
- 		background: url('../img/circle-left.svg') center center no-repeat;
-		&.active {background-image: url('../img/circle-left-active.svg'); }
+		left: 0;	
+		top: 40px;	
+ 		background: url('../img/circle-left.png') center top no-repeat;
+		&.active {background-position: center bottom;}
 		
 	}
 	.node-2 {
-		background: url('../img/circle-center.svg') center center no-repeat;
+		background: url('../img/circle-center.png') center top no-repeat;
 		height: 275px;
 		width: 83px;
-		&.active {background-image: url('../img/circle-center-active.svg');}
+		left: 0;top: 0;right: 0;margin: auto;
+		&.active {background-position: center bottom;}
 	}	
 	.node-3 {
-		background: url('../img/circle-right.svg') center center no-repeat;
-		right: 15px;
-		&.active {background-image: url('../img/circle-right-active.svg');}
+		background: url('../img/circle-right.png') center top no-repeat;
+		right: 0;
+		top: 35px;
+		&.active {background-position: center bottom;}
 	}	
 
 	@media (min-width: $screen-sm-min) {
-		height: 605px;	
-		background-size: 245px 170px;		
-		.node-1 {left: 60px; width: 302px; height: 508px;}
-		.node-2 {left: 5px; width: 208px; height: 670px;}
-		.node-3 {right: 50px; width: 317px; height: 510px;}		
+		//height: 605px;	
+		height: 680px;	
+		//background-size: 245px 170px;		
+		.node-1, .node-3 {top: 85px;}
+		.node-1 {left: 0; width: 302px; height: 508px;}
+		.node-2 {left: 5px; width: 216px; height: 690px;}
+		.node-3 {right: -10px; width: 317px; height: 510px;}		
 	}
 	@media (min-width: $screen-md-min) {
-		height: 680px;	
+		
 		.node-1 {left: 138px;}
 		.node-2 {left: 5px;}
 		.node-3 {right: 125px;}
 	}
 
 }
-#cicrular-bak {
-	.bak {width: 50px;height: 50px; position: absolute; left: -10000000em; visibility: hidden; z-index: -3;}
-	.bak-1 {background-image: url('../img/circle-left-active.svg');}
-	.bak-1 {background-image: url('../img/circle-center-active.svg');}
-	.bak-1 {background-image: url('../img/circle-right-active.svg');}	
-}
+
 
 /* КАК ЭТО РАБОТАЕТ */
 .howitworks {
@@ -241,7 +252,7 @@ $sect-mg-neg: 39px;
 	}
 	@media (min-width: $screen-md-min) {
 		position: relative;		
-		.device {position: absolute; left: 0;top: -30px;right: 0; margin: auto; }
+		.device {position: absolute; left: 0;top: -21px;right: 0; margin: auto; }
 	}
 }
 
@@ -334,7 +345,7 @@ $sect-mg-neg: 39px;
 	.header {display: flex; align-items: center; margin-bottom: 10px;}
 	.icon {display: block;width: 39px;text-align: center; margin-right: 4px;}
 	.h-slide-card {line-height: 1.3}
-	.info {		
+	.card>p {		
 		font-size: 11px;
 		@media (max-width: $screen-sm-max) {font-size: 11px !important;}	
 		@media (min-width: $screen-md-min) {font-size: 13px;}

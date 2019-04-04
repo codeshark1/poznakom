@@ -619,6 +619,9 @@ body {
   @media (min-width: 1040px) {
     body {
       font-size: 18px; } }
+  @media screen and (max-device-width: 480px) {
+    body {
+      -webkit-text-size-adjust: none; } }
 
 a {
   color: #009DFF; }
@@ -643,9 +646,6 @@ a, svg, path, button {
    ========================================================================== */
 .header-site {
   background: #00ACFF url("../img/bg.svg") 50% 50% no-repeat; }
-  @media (max-width: 799px) {
-    .header-site {
-      background-size: auto 100%; } }
   .header-site .logo {
     width: 80px;
     margin: 0 0 0 10px; }
@@ -785,76 +785,72 @@ a, svg, path, button {
     background: #F8F8F8; }
 
 #circular {
-  background: url("../img/explained-bg.svg") 50% 50% no-repeat;
+  background: url("../img/explained-bg.png") 50% 50% no-repeat;
   height: 275px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-size: 105px 75px; }
+  position: relative; }
+  #circular .node {
+    position: absolute; }
   @media (max-width: 799px) {
     #circular {
       max-width: 320px;
-      margin: 0 auto; } }
-  #circular .node {
-    position: relative; }
-  #circular .node-1, #circular .node-3 {
-    width: 124px;
-    height: 198px; }
+      margin: 0 auto;
+      background-size: 140px auto; }
+      #circular .node-1,
+      #circular .node-3 {
+        width: 124px;
+        height: 198px; }
+      #circular .node-1 {
+        background-size: 118px auto !important; }
+      #circular .node-2 {
+        background-size: 86px auto !important; }
+      #circular .node-3 {
+        background-size: 123px auto !important; } }
   #circular .node-1 {
-    left: 15px;
-    background: url("../img/circle-left.svg") center center no-repeat; }
+    left: 0;
+    top: 40px;
+    background: url("../img/circle-left.png") center top no-repeat; }
     #circular .node-1.active {
-      background-image: url("../img/circle-left-active.svg"); }
+      background-position: center bottom; }
   #circular .node-2 {
-    background: url("../img/circle-center.svg") center center no-repeat;
+    background: url("../img/circle-center.png") center top no-repeat;
     height: 275px;
-    width: 83px; }
+    width: 83px;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto; }
     #circular .node-2.active {
-      background-image: url("../img/circle-center-active.svg"); }
+      background-position: center bottom; }
   #circular .node-3 {
-    background: url("../img/circle-right.svg") center center no-repeat;
-    right: 15px; }
+    background: url("../img/circle-right.png") center top no-repeat;
+    right: 0;
+    top: 35px; }
     #circular .node-3.active {
-      background-image: url("../img/circle-right-active.svg"); }
+      background-position: center bottom; }
   @media (min-width: 800px) {
     #circular {
-      height: 605px;
-      background-size: 245px 170px; }
+      height: 680px; }
+      #circular .node-1, #circular .node-3 {
+        top: 85px; }
       #circular .node-1 {
-        left: 60px;
+        left: 0;
         width: 302px;
         height: 508px; }
       #circular .node-2 {
         left: 5px;
-        width: 208px;
-        height: 670px; }
+        width: 216px;
+        height: 690px; }
       #circular .node-3 {
-        right: 50px;
+        right: -10px;
         width: 317px;
         height: 510px; } }
   @media (min-width: 1040px) {
-    #circular {
-      height: 680px; }
-      #circular .node-1 {
-        left: 138px; }
-      #circular .node-2 {
-        left: 5px; }
-      #circular .node-3 {
-        right: 125px; } }
-
-#cicrular-bak .bak {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: -10000000em;
-  visibility: hidden;
-  z-index: -3; }
-#cicrular-bak .bak-1 {
-  background-image: url("../img/circle-left-active.svg"); }
-#cicrular-bak .bak-1 {
-  background-image: url("../img/circle-center-active.svg"); }
-#cicrular-bak .bak-1 {
-  background-image: url("../img/circle-right-active.svg"); }
+    #circular .node-1 {
+      left: 138px; }
+    #circular .node-2 {
+      left: 5px; }
+    #circular .node-3 {
+      right: 125px; } }
 
 /* КАК ЭТО РАБОТАЕТ */
 .howitworks {
@@ -883,7 +879,7 @@ a, svg, path, button {
       .howitworks .device {
         position: absolute;
         left: 0;
-        top: -30px;
+        top: -21px;
         right: 0;
         margin: auto; } }
 
@@ -976,13 +972,13 @@ a, svg, path, button {
     margin-right: 4px; }
   .slide-card .h-slide-card {
     line-height: 1.3; }
-  .slide-card .info {
+  .slide-card .card > p {
     font-size: 11px; }
     @media (max-width: 1039px) {
-      .slide-card .info {
+      .slide-card .card > p {
         font-size: 11px !important; } }
     @media (min-width: 1040px) {
-      .slide-card .info {
+      .slide-card .card > p {
         font-size: 13px; } }
 
 /* serv */
