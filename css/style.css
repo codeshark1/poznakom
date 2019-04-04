@@ -715,6 +715,9 @@ a, svg, path, button {
   line-height: 1;
   text-decoration: none; }
 
+.btn-header .icon path {
+  fill: #00ACFF; }
+
 /* CONTENT */
 .content-landing {
   text-align: center; }
