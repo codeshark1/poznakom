@@ -1,5 +1,7 @@
 var md = new MobileDetect(window.navigator.userAgent);
 
+var x = document.getElementById("myAudio"); 
+
 
 $(window).on('load resize orientationchange', function() {
     $('.row-carousel').each(function(){
@@ -59,6 +61,8 @@ $(window).on('load resize orientationchange', function() {
 $('#circular').find('.node').mouseenter(function(){
     if ( $(window).width() >= 1040 && !md.phone() && !md.tablet()) {
         $(this).addClass('active').siblings().removeClass('active');
+        x.pause(); 
+        x.play(); 
     }
 });
 $(window).on('load', function(){
@@ -87,10 +91,12 @@ $(document).ready(function(){
     $('.howitworks').find('.device').css('opacity',0);
 });
 
-$('#slides').find('.slide-card').hover(function(){
+$('#slides').find('.slide-card').mouseenter(function(){
     if ( $(window).width() >= 1040 ) {
         $(this).addClass('active').siblings().removeClass('active');  
         $('#device').find("div[data-id='" + $(this).data('id') +"']").addClass('visible').siblings().removeClass('visible');
+        x.pause(); 
+        x.play(); 
     }
 });  
 $('#slides').find('.slide-card:first-child').mouseenter();
