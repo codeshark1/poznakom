@@ -976,13 +976,7 @@ a, svg, path, button {
   .slide-card .h-slide-card {
     line-height: 1.3; }
   .slide-card .card > p {
-    font-size: 11px; }
-    @media (max-width: 1039px) {
-      .slide-card .card > p {
-        font-size: 11px !important; } }
-    @media (min-width: 1040px) {
-      .slide-card .card > p {
-        font-size: 13px; } }
+    font-size: 13px; }
 
 /* serv */
 .art-serv h1 {
@@ -1054,3 +1048,5 @@ a, svg, path, button {
 .menu-footer a {
   color: #676667;
   text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

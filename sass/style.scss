@@ -345,10 +345,8 @@ $sect-mg-neg: 39px;
 	.header {display: flex; align-items: center; margin-bottom: 10px;}
 	.icon {display: block;width: 39px;text-align: center; margin-right: 4px;}
 	.h-slide-card {line-height: 1.3}
-	.card>p {		
-		font-size: 11px;
-		@media (max-width: $screen-sm-max) {font-size: 11px !important;}	
-		@media (min-width: $screen-md-min) {font-size: 13px;}
+	.card>p {
+		font-size: 13px;
 	}
 }
 
