@@ -609,9 +609,6 @@ h1, h2, h3, h4 {
 
   h2, h3 {
     page-break-after: avoid; } }
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -795,7 +792,9 @@ a, svg, path, button {
   height: 275px;
   position: relative; }
   #circular .node {
-    position: absolute; }
+    position: absolute;
+    -webkit-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important; }
   @media (max-width: 799px) {
     #circular {
       max-width: 320px;
