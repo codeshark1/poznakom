@@ -4,6 +4,7 @@
 @import '_plugins';
 @import '_other';
 
+
 body {	
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
@@ -45,9 +46,6 @@ $sect-mg-neg: 39px;
 
 .header-site {
 	background: #00ACFF url('../img/bg.svg') 50% 50% no-repeat;
-	@media (max-width: $screen-xs-max) {
-		//background-size: auto 100%;
-	}
 
 	.logo {width: 80px; margin: 0 0 0 10px;
 		@media (min-width: $screen-sm-min) {width: 100px;}
@@ -173,10 +171,11 @@ $sect-mg-neg: 39px;
 	background: url('../img/explained-bg.png') 50% 50% no-repeat;
 	height: 275px;	
 	position: relative;
-	//display: flex;
-	//justify-content: space-between;
-	//align-items: center;
-	.node {position: absolute;}
+	.node {
+		position: absolute;
+		-webkit-tap-highlight-color: transparent !important;
+		tap-highlight-color: transparent !important;
+	}
 	
 	@media (max-width: $screen-xs-max) {
 		max-width: 320px;
@@ -216,16 +215,13 @@ $sect-mg-neg: 39px;
 	}	
 
 	@media (min-width: $screen-sm-min) {
-		//height: 605px;	
 		height: 680px;	
-		//background-size: 245px 170px;		
 		.node-1, .node-3 {top: 85px;}
 		.node-1 {left: 0; width: 302px; height: 508px;}
 		.node-2 {left: 5px; width: 216px; height: 690px;}
 		.node-3 {right: -10px; width: 317px; height: 510px;}		
 	}
-	@media (min-width: $screen-md-min) {
-		
+	@media (min-width: $screen-md-min) {		
 		.node-1 {left: 138px;}
 		.node-2 {left: 5px;}
 		.node-3 {right: 125px;}
@@ -301,9 +297,6 @@ $sect-mg-neg: 39px;
 		}
 	}
 
-	@media (min-width: $screen-sm-min) {		
-		//.card {height: 180px;}
-	}
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		.card {margin: 0 12px;}
 	}
@@ -345,16 +338,13 @@ $sect-mg-neg: 39px;
 	.header {display: flex; align-items: center; margin-bottom: 10px;}
 	.icon {display: block;width: 39px;text-align: center; margin-right: 4px;}
 	.h-slide-card {line-height: 1.3}
-	.card>p {		
-		font-size: 11px;
-		@media (max-width: $screen-sm-max) {font-size: 11px !important;}	
-		@media (min-width: $screen-md-min) {font-size: 13px;}
+	.card>p {
+		font-size: 13px;
 	}
 }
 
 /* serv */
 .art-serv {
-	//padding-top: 3rem;
 	h1 {margin: 0 0 40px 0;}
 	h2 {margin: 0 0 30px 0;}
 	h3 {margin: 0 0 10px 0;}
@@ -396,7 +386,6 @@ $sect-mg-neg: 39px;
 	@media (min-width: $screen-sm-min) {
 		display: flex;
 		justify-content: space-between;
-		//.col-1 {margin-right: 40px;}
 		.col-2 {width: 64%;}
 	}
 	@media (min-width: $screen-md-min) {

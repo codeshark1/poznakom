@@ -1,3 +1,5 @@
+document.addEventListener("touchstart", function(){}, true);
+
 var md = new MobileDetect(window.navigator.userAgent);
 
 var x = document.getElementById("myAudio"); 
