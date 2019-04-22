@@ -193,6 +193,7 @@ $sect-mg-neg: 39px;
 		}
 		.node-3 {background-size: 123px auto !important;			}
 	}
+
 	.node-1 {
 		left: 0;	
 		top: 40px;	
@@ -218,7 +219,7 @@ $sect-mg-neg: 39px;
 		height: 680px;	
 		.node-1, .node-3 {top: 85px;}
 		.node-1 {left: 0; width: 302px; height: 508px;}
-		.node-2 {left: 5px; width: 216px; height: 690px;}
+		.node-2 {left: 5px; width: 216px; height: 690px; top: -6px}
 		.node-3 {right: -10px; width: 317px; height: 510px;}		
 	}
 	@media (min-width: $screen-md-min) {		

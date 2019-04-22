@@ -844,7 +844,8 @@ a, svg, path, button {
       #circular .node-2 {
         left: 5px;
         width: 216px;
-        height: 690px; }
+        height: 690px;
+        top: -6px; }
       #circular .node-3 {
         right: -10px;
         width: 317px;
