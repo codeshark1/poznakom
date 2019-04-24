@@ -102,7 +102,9 @@ $sect-mg-neg: 39px;
 }
 .buttons-center {justify-content: center;}
 
-.btn-back {display: inline-block; margin: 20px 0;font-size: 40px; line-height: 1; text-decoration: none;}
+.btn-back {display: inline-block; margin: 20px 0;font-size: 40px; line-height: 1; text-decoration: none;
+	@media (max-width: $screen-sm-max) {display: none;}
+}
 .btn-header .icon path{fill: #00ACFF}
 
 
@@ -346,10 +348,12 @@ $sect-mg-neg: 39px;
 
 /* serv */
 .art-serv {
+	@media (max-width: $screen-sm-max) {
+		margin-top: 40px;
+	}
 	h1 {margin: 0 0 40px 0;}
 	h2 {margin: 0 0 30px 0;}
-	h3 {margin: 0 0 10px 0;}
-	p {text-indent: 40px;}
+	h3 {margin: 0 0 10px 0;}	
 	p, ul, ol {margin-bottom: 30px;}
 	p+ul, p+ol {margin-top: -30px;}
 	.welcome, .date {text-indent: 0;}
@@ -368,7 +372,9 @@ $sect-mg-neg: 39px;
 		ul {margin-bottom: 0;}
 	}
 }
-
+.text-indent {
+	p {text-indent: 40px;}
+}
 
 /* ==========================================================================
    FOOTER
